@@ -1,0 +1,677 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE062E012D510CF000799659 /* login_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DE062E002D510CF000799659 /* login_screen.png */; };
+		DE062E032D510E4600799659 /* events_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DE062E022D510E4600799659 /* events_screen.png */; };
+		DE8E684C2D13E9D5002BAE8E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DE8E684B2D13E9D5002BAE8E /* FirebaseAnalytics */; };
+		DE8E69BA2D13F26F002BAE8E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = DE8E69B92D13F26F002BAE8E /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		DE8E69BC2D13F26F002BAE8E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DE8E69BB2D13F26F002BAE8E /* FirebaseAuth */; };
+		DE8E69BE2D13F26F002BAE8E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DE8E69BD2D13F26F002BAE8E /* FirebaseFirestore */; };
+		DE8F9AFB2D4909C100FE2028 /* .gitignore in Sources */ = {isa = PBXBuildFile; fileRef = DE8F9AFA2D4909AF00FE2028 /* .gitignore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE8E67D92D13E57D002BAE8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE8E67C02D13E57B002BAE8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE8E67C72D13E57B002BAE8E;
+			remoteInfo = 24hBerlin;
+		};
+		DE8E67E32D13E57D002BAE8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE8E67C02D13E57B002BAE8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE8E67C72D13E57B002BAE8E;
+			remoteInfo = 24hBerlin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE062E002D510CF000799659 /* login_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_screen.png; sourceTree = "<group>"; };
+		DE062E022D510E4600799659 /* events_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = events_screen.png; sourceTree = "<group>"; };
+		DE8E67C82D13E57B002BAE8E /* 24hBerlin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 24hBerlin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8E67D82D13E57D002BAE8E /* 24hBerlinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 24hBerlinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8E67E22D13E57D002BAE8E /* 24hBerlinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 24hBerlinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8F9AFA2D4909AF00FE2028 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DE8E67CA2D13E57B002BAE8E /* 24hBerlin */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = 24hBerlin;
+			sourceTree = "<group>";
+		};
+		DE8E67DB2D13E57D002BAE8E /* 24hBerlinTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = 24hBerlinTests;
+			sourceTree = "<group>";
+		};
+		DE8E67E52D13E57D002BAE8E /* 24hBerlinUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = 24hBerlinUITests;
+			sourceTree = "<group>";
+		};
+		DE8F9CC62D494E6E00FE2028 /* Secrets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Secrets;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE8E67C52D13E57B002BAE8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8E684C2D13E9D5002BAE8E /* FirebaseAnalytics in Frameworks */,
+				DE8E69BE2D13F26F002BAE8E /* FirebaseFirestore in Frameworks */,
+				DE8E69BC2D13F26F002BAE8E /* FirebaseAuth in Frameworks */,
+				DE8E69BA2D13F26F002BAE8E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8E67D52D13E57D002BAE8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8E67DF2D13E57D002BAE8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE8E67BF2D13E57B002BAE8E = {
+			isa = PBXGroup;
+			children = (
+				DE8F9CC62D494E6E00FE2028 /* Secrets */,
+				DE062E022D510E4600799659 /* events_screen.png */,
+				DE062E002D510CF000799659 /* login_screen.png */,
+				DE8F9AFA2D4909AF00FE2028 /* .gitignore */,
+				DE8E67CA2D13E57B002BAE8E /* 24hBerlin */,
+				DE8E67DB2D13E57D002BAE8E /* 24hBerlinTests */,
+				DE8E67E52D13E57D002BAE8E /* 24hBerlinUITests */,
+				DE8E69B82D13F26F002BAE8E /* Frameworks */,
+				DE8E67C92D13E57B002BAE8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE8E67C92D13E57B002BAE8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE8E67C82D13E57B002BAE8E /* 24hBerlin.app */,
+				DE8E67D82D13E57D002BAE8E /* 24hBerlinTests.xctest */,
+				DE8E67E22D13E57D002BAE8E /* 24hBerlinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE8E69B82D13F26F002BAE8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE8E67C72D13E57B002BAE8E /* 24hBerlin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE8E67EC2D13E57D002BAE8E /* Build configuration list for PBXNativeTarget "24hBerlin" */;
+			buildPhases = (
+				DE8F9CC72D494F2900FE2028 /* ShellScript */,
+				DE8E67C42D13E57B002BAE8E /* Sources */,
+				DE8E67C52D13E57B002BAE8E /* Frameworks */,
+				DE8E67C62D13E57B002BAE8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DE8E67CA2D13E57B002BAE8E /* 24hBerlin */,
+				DE8F9CC62D494E6E00FE2028 /* Secrets */,
+			);
+			name = 24hBerlin;
+			packageProductDependencies = (
+				DE8E684B2D13E9D5002BAE8E /* FirebaseAnalytics */,
+				DE8E69B92D13F26F002BAE8E /* FirebaseAnalyticsWithoutAdIdSupport */,
+				DE8E69BB2D13F26F002BAE8E /* FirebaseAuth */,
+				DE8E69BD2D13F26F002BAE8E /* FirebaseFirestore */,
+			);
+			productName = 24hBerlin;
+			productReference = DE8E67C82D13E57B002BAE8E /* 24hBerlin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE8E67D72D13E57D002BAE8E /* 24hBerlinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE8E67EF2D13E57D002BAE8E /* Build configuration list for PBXNativeTarget "24hBerlinTests" */;
+			buildPhases = (
+				DE8E67D42D13E57D002BAE8E /* Sources */,
+				DE8E67D52D13E57D002BAE8E /* Frameworks */,
+				DE8E67D62D13E57D002BAE8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE8E67DA2D13E57D002BAE8E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DE8E67DB2D13E57D002BAE8E /* 24hBerlinTests */,
+			);
+			name = 24hBerlinTests;
+			packageProductDependencies = (
+			);
+			productName = 24hBerlinTests;
+			productReference = DE8E67D82D13E57D002BAE8E /* 24hBerlinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE8E67E12D13E57D002BAE8E /* 24hBerlinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE8E67F22D13E57D002BAE8E /* Build configuration list for PBXNativeTarget "24hBerlinUITests" */;
+			buildPhases = (
+				DE8E67DE2D13E57D002BAE8E /* Sources */,
+				DE8E67DF2D13E57D002BAE8E /* Frameworks */,
+				DE8E67E02D13E57D002BAE8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE8E67E42D13E57D002BAE8E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DE8E67E52D13E57D002BAE8E /* 24hBerlinUITests */,
+			);
+			name = 24hBerlinUITests;
+			packageProductDependencies = (
+			);
+			productName = 24hBerlinUITests;
+			productReference = DE8E67E22D13E57D002BAE8E /* 24hBerlinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE8E67C02D13E57B002BAE8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					DE8E67C72D13E57B002BAE8E = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					DE8E67D72D13E57D002BAE8E = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = DE8E67C72D13E57B002BAE8E;
+					};
+					DE8E67E12D13E57D002BAE8E = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = DE8E67C72D13E57B002BAE8E;
+					};
+				};
+			};
+			buildConfigurationList = DE8E67C32D13E57B002BAE8E /* Build configuration list for PBXProject "24hBerlin" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = DE8E67BF2D13E57B002BAE8E;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DE8E684A2D13E9D5002BAE8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DE8E67C92D13E57B002BAE8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE8E67C72D13E57B002BAE8E /* 24hBerlin */,
+				DE8E67D72D13E57D002BAE8E /* 24hBerlinTests */,
+				DE8E67E12D13E57D002BAE8E /* 24hBerlinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE8E67C62D13E57B002BAE8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE062E032D510E4600799659 /* events_screen.png in Resources */,
+				DE062E012D510CF000799659 /* login_screen.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8E67D62D13E57D002BAE8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8E67E02D13E57D002BAE8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DE8F9CC72D494F2900FE2028 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Path to your Secrets folder (adjust as needed)\nSECRETS_DIR=\"${PROJECT_DIR}/Secrets\"  # .. goes up one directory\n\n# Path to the GoogleService-Info.plist file (adjust if necessary)\nGOOGLE_SERVICE_INFO_PLIST=\"${SECRETS_DIR}/GoogleService-Info.plist\"\n\n# Path to the destination folder in your app bundle\nDESTINATION_DIR=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\"\n\n# Check if the Secrets folder and plist file exist\nif [ ! -d \"$SECRETS_DIR\" ]; then\n  echo \"Error: Secrets directory not found: $SECRETS_DIR\"\n  exit 1\nfi\n\nif [ ! -f \"$GOOGLE_SERVICE_INFO_PLIST\" ]; then\n  echo \"Error: GoogleService-Info.plist not found: $GOOGLE_SERVICE_INFO_PLIST\"\n  exit 1\nfi\n\n# Copy the plist file\ncp \"$GOOGLE_SERVICE_INFO_PLIST\" \"$DESTINATION_DIR\"\n\necho \"GoogleService-Info.plist copied to: $DESTINATION_DIR\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE8E67C42D13E57B002BAE8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8F9AFB2D4909C100FE2028 /* .gitignore in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8E67D42D13E57D002BAE8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8E67DE2D13E57D002BAE8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE8E67DA2D13E57D002BAE8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE8E67C72D13E57B002BAE8E /* 24hBerlin */;
+			targetProxy = DE8E67D92D13E57D002BAE8E /* PBXContainerItemProxy */;
+		};
+		DE8E67E42D13E57D002BAE8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE8E67C72D13E57B002BAE8E /* 24hBerlin */;
+			targetProxy = DE8E67E32D13E57D002BAE8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DE8E67EA2D13E57D002BAE8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE8E67EB2D13E57D002BAE8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE8E67ED2D13E57D002BAE8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"24hBerlin/Preview Content\"";
+				DEVELOPMENT_TEAM = 455Z679AMN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "24h Berlin";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Is required for calculating routes";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.24hBerlin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE8E67EE2D13E57D002BAE8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"24hBerlin/Preview Content\"";
+				DEVELOPMENT_TEAM = 455Z679AMN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "24h Berlin";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Is required for calculating routes";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.24hBerlin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE8E67F02D13E57D002BAE8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-4hBerlinTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/24hBerlin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/24hBerlin";
+			};
+			name = Debug;
+		};
+		DE8E67F12D13E57D002BAE8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-4hBerlinTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/24hBerlin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/24hBerlin";
+			};
+			name = Release;
+		};
+		DE8E67F32D13E57D002BAE8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-4hBerlinUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = 24hBerlin;
+			};
+			name = Debug;
+		};
+		DE8E67F42D13E57D002BAE8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-4hBerlinUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = 24hBerlin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE8E67C32D13E57B002BAE8E /* Build configuration list for PBXProject "24hBerlin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8E67EA2D13E57D002BAE8E /* Debug */,
+				DE8E67EB2D13E57D002BAE8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE8E67EC2D13E57D002BAE8E /* Build configuration list for PBXNativeTarget "24hBerlin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8E67ED2D13E57D002BAE8E /* Debug */,
+				DE8E67EE2D13E57D002BAE8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE8E67EF2D13E57D002BAE8E /* Build configuration list for PBXNativeTarget "24hBerlinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8E67F02D13E57D002BAE8E /* Debug */,
+				DE8E67F12D13E57D002BAE8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE8E67F22D13E57D002BAE8E /* Build configuration list for PBXNativeTarget "24hBerlinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8E67F32D13E57D002BAE8E /* Debug */,
+				DE8E67F42D13E57D002BAE8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE8E684A2D13E9D5002BAE8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE8E684B2D13E9D5002BAE8E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE8E684A2D13E9D5002BAE8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		DE8E69B92D13F26F002BAE8E /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE8E684A2D13E9D5002BAE8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		DE8E69BB2D13F26F002BAE8E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE8E684A2D13E9D5002BAE8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DE8E69BD2D13F26F002BAE8E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE8E684A2D13E9D5002BAE8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DE8E67C02D13E57B002BAE8E /* Project object */;
+}

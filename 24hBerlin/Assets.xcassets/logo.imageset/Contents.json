@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "logo_1024_transparent_72dpi.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "logo_1024_transparent_72dpi 1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "logo_1024_transparent_72dpi 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
