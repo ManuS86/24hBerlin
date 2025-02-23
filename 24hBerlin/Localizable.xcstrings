@@ -891,10 +891,11 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Language"
+            "value" : "Sprache"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "language_settings" : {
       "extractionState" : "manual",
@@ -1152,7 +1153,15 @@
       }
     },
     "OK" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      },
+      "shouldTranslate" : false
     },
     "party" : {
       "extractionState" : "manual",

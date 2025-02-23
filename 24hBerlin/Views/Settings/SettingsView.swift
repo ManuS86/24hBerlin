@@ -13,7 +13,7 @@ struct SettingsView: View {
     @EnvironmentObject private var settingsVM: SettingsViewModel
     @State private var showAlertDel = false
     @State private var showAlertLog = false
-    @State private var showingBugReport: Bool = false
+    @State private var showBugReport: Bool = false
     
     private let logoSize: CGFloat = 40
     
@@ -126,7 +126,7 @@ struct SettingsView: View {
                     }
                     
                     Button {
-                        showingBugReport = true
+                        showBugReport = true
                     } label: {
                         Text("report_a_bug")
                             .fontWeight(.medium)
@@ -190,10 +190,11 @@ struct SettingsView: View {
                         .scaledToFill()
                         .ignoresSafeArea()
                 )
-                .sheet(isPresented: $showingBugReport) {
-                    BugReportView(showingBugReport: $showingBugReport)
+                .sheet(isPresented: $showBugReport) {
+                    BugReportView(showBugReport: $showBugReport)
                         .environmentObject(settingsVM)
                         .presentationDragIndicator(.visible)
+                        .presentationDetents([.medium, .large])
                 }
             }
             .scrollIndicators(.hidden)

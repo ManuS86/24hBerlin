@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct BugReportView: View {
-    @Binding var showingBugReport: Bool
+    @Binding var showBugReport: Bool
     @EnvironmentObject private var settingsVM: SettingsViewModel
     @FocusState var isFocused: Bool
-    @State private var showingAlert: Bool = false
     @State private var alertMessage: String = ""
+    @State private var showAlert: Bool = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -22,7 +22,7 @@ struct BugReportView: View {
                 .foregroundStyle(.black)
                 .padding(.bottom, mediumPadding)
             
-            TextEditor(text: $settingsVM.bugMessage)
+            TextEditor(text: $settingsVM.bugReport)
                 .frame(height: 200)
                 .padding(regularPadding)
                 .background(.white)
@@ -34,29 +34,29 @@ struct BugReportView: View {
                 )
             
             Button("send_bug_report") {
-                if settingsVM.bugMessage.isEmpty {
+                if settingsVM.bugReport.isEmpty {
                     alertMessage = "please_describe_the_bug."
-                    showingAlert = true
+                    showAlert = true
                 } else {
                     settingsVM.sendBugReport() { error in
                         if let error = error {
                             alertMessage = error.localizedDescription
-                            showingAlert = true
+                            showAlert = true
                         } else {
                             alertMessage = "thank_you_for_your_report!"
-                            showingAlert = true
-                            settingsVM.bugMessage = ""
+                            showAlert = true
+                            settingsVM.bugReport = ""
                         }
                     }
                 }
             }
-            .alert(isPresented: $showingAlert) {
+            .alert(isPresented: $showAlert) {
                 Alert(
                     title: Text("bug_report"),
                     message: Text(LocalizedStringKey(alertMessage)),
                     dismissButton: .default(Text("OK"), action: {
                         if alertMessage == "thank_you_for_your_report!" {
-                            showingBugReport = false
+                            showBugReport = false
                         }
                     })
                 )
@@ -66,11 +66,5 @@ struct BugReportView: View {
         }
         .maxHeight()
         .padding(regularPadding)
-        .background(
-            Image("background")
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
-        )
     }
 }

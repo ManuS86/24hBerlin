@@ -11,7 +11,7 @@ import SwiftUI
 
 @MainActor
 class SettingsViewModel: ObservableObject {
-    @Published var bugMessage: String = ""
+    @Published var bugReport: String = ""
     @Published var confirmationMessage: String?
     @Published var confirmNewPassword: String = ""
     @Published var currentUser: AppUser?
@@ -118,7 +118,7 @@ class SettingsViewModel: ObservableObject {
     }
     
     func sendBugReport(completion: @escaping (Error?) -> Void) {
-        userRepo.sendBugReport(message: bugMessage, completion: completion)
+        userRepo.sendBugReport(message: bugReport, completion: completion)
     }
     
     func deleteAccount() {
