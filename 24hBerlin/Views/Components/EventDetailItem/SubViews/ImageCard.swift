@@ -10,7 +10,7 @@ import SwiftUI
 struct ImageCard: View {
     var imageURL: String?
     
-    private let imageSize: CGFloat = 200
+    private let imageSize: CGFloat = 180
     
     var body: some View {
         if let imageURL {
