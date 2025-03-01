@@ -52,7 +52,7 @@ class EventViewModel: ObservableObject {
             do {
                 try await userRepo.updateUserInformation(favoriteID: favoriteID)
                 if currentUser?.settings.pushNotificationsEnabled == true {
-                    notificationService.scheduleEventReminder(for: event, dayModifier: 2, hourModifier: 11)
+                    notificationService.scheduleEventReminder(for: event, dayModifier: 3, hourModifier: 11)
                     notificationService.scheduleEventReminder(for: event, dayModifier: 0, hourModifier: 11)
                     notificationService.scheduleEventReminder(for: event, dayModifier: 0, hourModifier: 2)
                 }

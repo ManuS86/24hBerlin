@@ -101,7 +101,7 @@ struct SettingsView: View {
                         .onChange(of: settingsVM.pushNotificationsEnabled) {
                             if settingsVM.pushNotificationsEnabled {
                                 for event in eventVM.favorites {
-                                    eventVM.addFavoritePushNotification(event: event, dayModifier: 2, hourModifier: 11)
+                                    eventVM.addFavoritePushNotification(event: event, dayModifier: 3, hourModifier: 11)
                                     eventVM.addFavoritePushNotification(event: event, dayModifier: 0, hourModifier: 11)
                                     eventVM.addFavoritePushNotification(event: event, dayModifier: 0, hourModifier: 2)
                                 }
