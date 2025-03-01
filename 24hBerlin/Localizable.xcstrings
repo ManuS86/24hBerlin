@@ -444,19 +444,19 @@
         }
       }
     },
-    "don't_forget:_\\(event.name)_is_happening_in_2_days!" : {
+    "don't_forget:_\\(event.name)_is_happening_in_3_days!" : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vergiss nicht: \\(event.name) findet in 2 Tagen statt!"
+            "value" : "Nichtvergessen: \\(event.name) findet in 3 Tagen statt!"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Don't forget: \\(event.name) is happening in 2 days!"
+            "value" : "Don't forget: \\(event.name) is happening in 3 days!"
           }
         }
       }
@@ -467,7 +467,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vergiss nicht: \\(event.name) findet in 3 Stunden statt!"
+            "value" : "Nicht vergessen: \\(event.name) findet in 3 Stunden statt!"
           }
         },
         "en" : {
@@ -484,7 +484,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vergiss nicht: \\(event.name) findet Heute statt!"
+            "value" : "Nicht vergessen: \\(event.name) findet Heute statt!"
           }
         },
         "en" : {
@@ -1678,7 +1678,7 @@
       "localizations" : {
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "24hBerlin teilen"
           }
         },

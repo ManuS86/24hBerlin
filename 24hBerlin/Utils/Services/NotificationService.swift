@@ -66,12 +66,12 @@ class NotificationService {
         let content = UNMutableNotificationContent()
         content.title = NSLocalizedString("event_reminder", comment: "Notification title")
         content.body =
-        if dayModifier == 2 {
-            NSLocalizedString("don't_forget:_\(event.name)_is_happening_in_2_days!", comment: "Notification 3 days before")
+        if dayModifier == 3 {
+            NSLocalizedString("don't_forget:_\(event.name)_is_happening_in_3_days!", comment: "Notification 3 days before")
         } else if hourModifier == 2 {
             NSLocalizedString("don't_forget:_\(event.name)_is_happening_in_3_hours!", comment: "Notification 3 hours before")
         } else {
-            NSLocalizedString("don't_forget:_\(event.name)_is_happening_today!", comment: "Notification 12 hours before")
+            NSLocalizedString("don't_forget:_\(event.name)_is_happening_today!", comment: "Notification today")
         }
         content.sound = .default
         
