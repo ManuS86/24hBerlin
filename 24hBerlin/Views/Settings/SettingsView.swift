@@ -117,7 +117,7 @@ struct SettingsView: View {
                         .fontWeight(.medium)
                     
                     ShareLink(items: [URL(string: "https://itunes.apple.com/app/24h-berlin")!]) {
-                        Text("share_twenty_four_hours_event_calendar")
+                        Text("share_24hberlin")
                             .fontWeight(.medium)
                             .maxWidth(.leading)
                             .padding(regularPadding)

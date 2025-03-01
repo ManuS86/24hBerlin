@@ -1673,19 +1673,19 @@
         }
       }
     },
-    "share_twenty_four_hours_event_calendar" : {
+    "share_24hberlin" : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Twenty Four Hours Kulturprogramm teilen"
+            "state" : "needs_review",
+            "value" : "24hBerlin teilen"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share Twenty Four Hours Event Calendar"
+            "value" : "Share 24hBerlin"
           }
         }
       }
