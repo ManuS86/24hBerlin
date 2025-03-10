@@ -8,6 +8,6 @@
 import Foundation
 
 struct Settings: Codable {
-    var pushNotificationsEnabled: Bool = false
+    var pushNotificationsEnabled: Bool = true
     var language: String? = nil
 }

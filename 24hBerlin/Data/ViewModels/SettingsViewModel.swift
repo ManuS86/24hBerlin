@@ -21,7 +21,7 @@ class SettingsViewModel: ObservableObject {
     @Published var newPassword: String = ""
     @Published var password: String = ""
     @Published var passwordError: String?
-    @Published var pushNotificationsEnabled = false
+    @Published var pushNotificationsEnabled = true
     @Published var selectedLanguage: Language?
     
     private let fb = FirebaseManager.shared

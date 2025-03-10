@@ -24,6 +24,13 @@ class EventViewModel: ObservableObject {
         return Array(Set(nonNilLocations)).sorted()
     }
     
+    var uniqueSounds: [String] {
+        let allSounds = events.flatMap { event -> [String] in
+            return event.sounds?.values.map { String($0) } ?? []
+        }
+        return Array(Set(allSounds)).sorted()
+    }
+    
     private let eventRepo = EventRepository()
     private let fb = FirebaseManager.shared
     private var listener: ListenerRegistration?

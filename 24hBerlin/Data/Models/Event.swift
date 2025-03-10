@@ -38,18 +38,14 @@ struct Event: Codable, Identifiable, Hashable {
         self.name = try container.decode(String.self, forKey: .name)
         self.permalink = try container.decode(String.self, forKey: .permalink)
         
-        let startString = try container.decode(String.self, forKey: .start)
-        if let startTimeInterval = TimeInterval(startString) {
-            self.start = Date(timeIntervalSince1970: startTimeInterval)
-        } else {
-            throw DecodingError.dataCorruptedError(forKey: .start, in: container, debugDescription: "Expected String value for startTime to be convertible to Int, but got: \(startString)")
-        }
+        let startInt = try container.decode(Int.self, forKey: .start)
+        self.start = Date(timeIntervalSince1970: TimeInterval(startInt))
         
         if let endInt = try container.decodeIfPresent(Int.self, forKey: .end) {
-                    self.end = Date(timeIntervalSince1970: TimeInterval(endInt))
-                } else {
-                    self.end = nil
-                }
+            self.end = Date(timeIntervalSince1970: TimeInterval(endInt))
+        } else {
+            self.end = nil
+        }
         
         self.details = try container.decode(String.self, forKey: .details)
         self.repeats = try container.decodeIfPresent([[Int]].self, forKey: .repeats)
@@ -105,28 +101,28 @@ struct Event: Codable, Identifiable, Hashable {
         hasher.combine(eventType)
         hasher.combine(sounds)
     }
-
+    
     static func == (lhs: Event, rhs: Event) -> Bool {
         return lhs.content == rhs.content &&
-               lhs.name == rhs.name &&
-               lhs.permalink == rhs.permalink &&
-               lhs.start == rhs.start &&
-               lhs.end == rhs.end &&
-               lhs.details == rhs.details &&
-               lhs.repeats == rhs.repeats &&
-               lhs.subtitle == rhs.subtitle &&
-               lhs.learnmoreLink == rhs.learnmoreLink &&
-               lhs.featured == rhs.featured &&
-               lhs.imageURL == rhs.imageURL &&
-               lhs.locationName == rhs.locationName &&
-               lhs.address == rhs.address &&
-               lhs.lat == rhs.lat &&
-               lhs.lon == rhs.lon &&
-               lhs.locationLink == rhs.locationLink &&
-               lhs.locationImage == rhs.locationImage &&
-               lhs.locationDesc == rhs.locationDesc &&
-               lhs.eventType == rhs.eventType &&
-               lhs.sounds == rhs.sounds
+        lhs.name == rhs.name &&
+        lhs.permalink == rhs.permalink &&
+        lhs.start == rhs.start &&
+        lhs.end == rhs.end &&
+        lhs.details == rhs.details &&
+        lhs.repeats == rhs.repeats &&
+        lhs.subtitle == rhs.subtitle &&
+        lhs.learnmoreLink == rhs.learnmoreLink &&
+        lhs.featured == rhs.featured &&
+        lhs.imageURL == rhs.imageURL &&
+        lhs.locationName == rhs.locationName &&
+        lhs.address == rhs.address &&
+        lhs.lat == rhs.lat &&
+        lhs.lon == rhs.lon &&
+        lhs.locationLink == rhs.locationLink &&
+        lhs.locationImage == rhs.locationImage &&
+        lhs.locationDesc == rhs.locationDesc &&
+        lhs.eventType == rhs.eventType &&
+        lhs.sounds == rhs.sounds
     }
     
     func encode(to encoder: Encoder) throws {

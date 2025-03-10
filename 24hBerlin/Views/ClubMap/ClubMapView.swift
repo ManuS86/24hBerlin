@@ -15,7 +15,7 @@ struct ClubMapView: View {
     @State private var selectedEvent: Event?
     @State private var selectedEventType: EventType?
     @State private var selectedMonth: Month?
-    @State private var selectedSound: Sound?
+    @State private var selectedSound: String?
     @State private var selectedVenue: String?
     
     private var filteredEvents: [Event] {
@@ -39,7 +39,7 @@ struct ClubMapView: View {
         
         if let selectedSound = selectedSound {
             filteredEvents = filteredEvents.filter { event in
-                event.sounds?.values.contains(where: { $0 == selectedSound.rawValue }) ?? false
+                event.sounds?.values.contains(selectedSound) ?? false
             }
         }
         
@@ -65,6 +65,7 @@ struct ClubMapView: View {
                 selectedMonth: $selectedMonth,
                 selectedSound: $selectedSound,
                 selectedVenue: $selectedVenue,
+                sounds: eventVM.uniqueSounds,
                 venues: eventVM.uniqueLocations
             )
             

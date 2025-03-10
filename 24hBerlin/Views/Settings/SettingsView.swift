@@ -98,6 +98,7 @@ struct SettingsView: View {
                         .padding(.vertical, mediumPadding)
                         .settingsFieldStyle()
                         .padding(.bottom, regularPadding)
+                        .tint(.black)
                         .onChange(of: settingsVM.pushNotificationsEnabled) {
                             if settingsVM.pushNotificationsEnabled {
                                 for event in eventVM.favorites {

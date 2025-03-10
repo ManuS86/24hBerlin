@@ -10,10 +10,11 @@ import SwiftUI
 struct FilterBar: View {
     @Binding var selectedEventType: EventType?
     @Binding var selectedMonth: Month?
-    @Binding var selectedSound: Sound?
+    @Binding var selectedSound: String?
     @Binding var selectedVenue: String?
     @State private var showFilters: Bool = false
     
+    var sounds: [String]
     var venues: [String]
     
     var body: some View {
@@ -60,6 +61,7 @@ struct FilterBar: View {
             
             if showFilters {
                 HStack {
+                    ScrollView(.horizontal) {
                     HStack(spacing: 12) {
                         Menu {
                             Picker("Type", selection: $selectedEventType) {
@@ -98,17 +100,17 @@ struct FilterBar: View {
                         Menu {
                             Picker("Sound", selection: $selectedSound) {
                                 Text("sound")
-                                    .tag(nil as Sound?)
+                                    .tag(nil as String?)
                                 
-                                ForEach(Sound.allCases) { sound in
-                                    Text(sound.rawValue)
+                                ForEach(sounds, id: \.self) { sound in
+                                    Text(sound)
                                         .tag(sound)
                                 }
                             }
                         } label: {
                             HStack(spacing: smallPadding) {
                                 if let selectedSound = selectedSound {
-                                    Text(selectedSound.rawValue)
+                                    Text(selectedSound)
                                         .pickerStyle()
                                 } else {
                                     Text("sound")
@@ -163,6 +165,8 @@ struct FilterBar: View {
                             .padding(.bottom, smallPadding)
                         }
                     }
+                    .scrollIndicators(.hidden)
+                }
                     
                     if selectedEventType != nil
                         || selectedSound != nil

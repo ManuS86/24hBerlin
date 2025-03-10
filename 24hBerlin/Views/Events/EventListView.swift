@@ -16,7 +16,7 @@ struct EventListView: View {
     @State private var searchText: String = ""
     @State private var selectedEventType: EventType?
     @State private var selectedMonth: Month?
-    @State private var selectedSound: Sound?
+    @State private var selectedSound: String?
     @State private var selectedVenue: String?
     
     private var filteredEvents: [Event] {
@@ -40,7 +40,7 @@ struct EventListView: View {
         
         if let selectedSound = selectedSound {
             filteredEvents = filteredEvents.filter { event in
-                event.sounds?.values.contains(where: { $0 == selectedSound.rawValue }) ?? false
+                event.sounds?.values.contains(selectedSound) ?? false
             }
         }
         
@@ -65,6 +65,7 @@ struct EventListView: View {
                 selectedMonth: $selectedMonth,
                 selectedSound: $selectedSound,
                 selectedVenue: $selectedVenue,
+                sounds: eventVM.uniqueSounds,
                 venues: eventVM.uniqueLocations
             )
             
