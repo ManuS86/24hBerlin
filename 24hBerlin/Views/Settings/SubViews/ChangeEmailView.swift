@@ -23,7 +23,7 @@ struct ChangeEmailView: View {
                 EmailField(
                     text: $settingsVM.email,
                     title: "new_email",
-                    hint: "please_enter_your_new_email"
+                    hint: "enter_your_new_email"
                 )
                 
                 if let error = settingsVM.errorMessage {

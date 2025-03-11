@@ -33,7 +33,7 @@ struct ForgotPasswordView: View {
                 EmailField(
                     text: $authVM.email,
                     title: "email",
-                    hint: "please_enter_your_email"
+                    hint: "enter_your_email"
                 )
                 
                 if let error = authVM.errorMessage {

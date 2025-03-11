@@ -28,21 +28,21 @@ struct RegisterView: View {
                     EmailField(
                         text: $authVM.email,
                         title: "email",
-                        hint: "please_enter_your_email"
+                        hint: "enter_an_email"
                     )
                     .padding(.bottom, regularPadding)
                     
                     PasswordField(
                         text: $authVM.password,
                         title: "password",
-                        hint: "please_enter_your_password"
+                        hint: "create_a_password"
                     )
                     .padding(.bottom, regularPadding)
                     
                     PasswordField(
                         text: $authVM.confirmPassword,
                         title: "confirm_password",
-                        hint: "please_confirm_your_password"
+                        hint: "confirm_your_password"
                     )
                     
                     if let passwordError = authVM.passwordError {

@@ -28,7 +28,7 @@ struct SettingsView: View {
                         HStack {
                             Text("change_email")
                             
-                            NavigationLink(destination: reAuthWrapper(settingsVM: settingsVM, from: 0)
+                            NavigationLink(destination: ReAuthWrapper(settingsVM: settingsVM, from: 0)
                                 .toolbarStyle(.hidden)) {
                                     Image(systemName: "chevron.right")
                                         .font(.footnote)
@@ -42,7 +42,7 @@ struct SettingsView: View {
                         
                         HStack {
                             Text("change_password")
-                            NavigationLink(destination: reAuthWrapper(settingsVM: settingsVM, from: 1)
+                            NavigationLink(destination: ReAuthWrapper(settingsVM: settingsVM, from: 1)
                                 .toolbarStyle(.hidden)) {
                                     Image(systemName: "chevron.right")
                                         .font(.footnote)

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct reAuthWrapper: View {
+struct ReAuthWrapper: View {
     @ObservedObject var settingsVM: SettingsViewModel
     
     var from: Int
@@ -26,8 +26,8 @@ struct reAuthWrapper: View {
                 VStack(alignment: .leading, spacing: 0) {
                     PasswordField(
                         text: $settingsVM.password,
-                        title: "re-enter_your_password",
-                        hint: "please_re-enter_your_password"
+                        title: "please_re-enter_your_password",
+                        hint: "re-enter_your_password"
                     )
                     
                     if let error = settingsVM.errorMessage {

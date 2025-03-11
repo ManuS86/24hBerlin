@@ -25,14 +25,14 @@ struct LoginView: View {
                     EmailField(
                         text: $authVM.email,
                         title: "email",
-                        hint: "please_enter_your_email"
+                        hint: "enter_your_email"
                     )
                     .padding(.bottom, regularPadding)
                     
                     PasswordField(
                         text: $authVM.password,
                         title: "password",
-                        hint: "please_enter_your_password"
+                        hint: "enter_your_password"
                     )
                     
                     if let error = authVM.errorMessage {

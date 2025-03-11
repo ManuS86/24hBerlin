@@ -23,14 +23,14 @@ struct ChangePasswordView: View {
                 PasswordField(
                     text: $settingsVM.newPassword,
                     title: "new_password",
-                    hint: "please_enter_your_new_password"
+                    hint: "enter_your_new_password"
                 )
                 .padding(.bottom, regularPadding)
                 
                 PasswordField(
                     text: $settingsVM.confirmNewPassword,
                     title: "confirm_new_password",
-                    hint: "please_confirm_your_new_password"
+                    hint: "confirm_your_new_password"
                 )
                 
                 if let passwordError = settingsVM.passwordError {
