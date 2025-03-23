@@ -103,7 +103,7 @@ class NotificationService {
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerComponents, repeats: false)
         
-        let request = UNNotificationRequest(identifier: event.id, content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "\(event.id)-\(dayModifier)-\(hourModifier)", content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
@@ -120,7 +120,7 @@ class NotificationService {
     }
     
     func unscheduleEventReminder(for event: Event) {
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [event.id])
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["\(event.id)-3-11", "\(event.id)-0-11", "\(event.id)-0-2"])
         print("Notification unscheduled for \(event.name)")
     }
     
