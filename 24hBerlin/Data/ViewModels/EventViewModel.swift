@@ -110,7 +110,7 @@ class EventViewModel: ObservableObject {
         let today = calendar.startOfDay(for: Date())
         
         return allEvents.filter { event in
-            calendar.compare(event.start, to: today, toGranularity: .day) != .orderedAscending
+            calendar.compare(event.end != nil ? event.end! : event.start, to: today, toGranularity: .day) != .orderedAscending
         }
         .sorted(by: { $0.start < $1.start })
     }
