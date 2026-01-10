@@ -31,11 +31,11 @@ class EventViewModel: ObservableObject {
         return Array(Set(allSounds)).sorted()
     }
     
-    private let eventRepo = EventRepository()
+    private let eventRepo = EventRepositoryImpl()
     private let fb = FirebaseManager.shared
     private var listener: ListenerRegistration?
     private let notificationService = NotificationService.shared
-    private let userRepo = UserRepository()
+    private let userRepo = UserRepositoryImpl()
     
     init() {
         if listener == nil {
@@ -72,11 +72,7 @@ class EventViewModel: ObservableObject {
     func loadEvents() {
         Task {
             do {
-                let allEvents = try await eventRepo.getEvents()
-                let eventsWithIds = setEventIds(allEvents)
-                let eventsWithRepeats = expandEventsWithRepeats(eventsWithIds)
-                let eventsCleaned = removeDuplicateEvents(eventsWithRepeats)
-                self.events = filterAndSortEvents(eventsCleaned)
+                self.events = try await eventRepo.getProcessedEvents()
             } catch {
                 print("Error loading events: \(error)")
             }
@@ -114,42 +110,6 @@ class EventViewModel: ObservableObject {
         }
         .sorted(by: { $0.start < $1.start })
     }
-    
-    private func removeDuplicateEvents(_ events: [Event]) -> [Event] {
-        var uniqueEvents = Set<Event>()
-        
-        for event in events {
-            uniqueEvents.insert(event)
-        }
-        return Array(uniqueEvents)
-    }
-    
-    private func expandEventsWithRepeats(_ events: [Event]) -> [Event] {
-        var expandedEvents: [Event] = []
-        
-        for event in events {
-            expandedEvents.append(event)
-            
-            guard let repeats = event.repeats else {
-                continue
-            }
-            
-            for (index, repeatData) in repeats.enumerated() {
-                let newStartInterval = TimeInterval(repeatData[0])
-                let newEndInterval = TimeInterval(repeatData[1])
-                let newStart = Date(timeIntervalSince1970: newStartInterval)
-                let newEnd = event.end != nil ? Date(timeIntervalSince1970: newEndInterval) : nil
-                
-                var repeatedEvent = event
-                repeatedEvent.id = "\(event.id)-\(index + 1)"
-                repeatedEvent.start = newStart
-                repeatedEvent.end = newEnd
-                expandedEvents.append(repeatedEvent)
-            }
-        }
-        return expandedEvents
-    }
-    
     
     private func setEventIds(_ dictionary: [String: Event]) -> [Event] {
         var updatedEvents: [Event] = []

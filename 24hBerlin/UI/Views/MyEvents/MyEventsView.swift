@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FavoritesListView: View {
+struct MyEventsView: View {
     @EnvironmentObject private var eventVM: EventViewModel
     @EnvironmentObject private var mapVM: MapViewModel
     @State private var searchText: String = ""
@@ -99,7 +99,7 @@ struct FavoritesListView: View {
 }
 
 #Preview {
-    FavoritesListView()
+    MyEventsView()
         .environmentObject(EventViewModel())
         .environmentObject(MapViewModel())
 }

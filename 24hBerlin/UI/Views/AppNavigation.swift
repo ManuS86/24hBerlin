@@ -59,7 +59,7 @@ struct AppNavigation: View {
             }
             
             NavigationStack {
-                FavoritesListView()
+                MyEventsView()
                     .environmentObject(eventsVM)
                     .environmentObject(mapVM)
                     .toolbar {

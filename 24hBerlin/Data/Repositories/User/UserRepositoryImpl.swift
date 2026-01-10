@@ -8,7 +8,7 @@
 import FirebaseFirestore
 import Foundation
 
-class UserRepository: UserRepositoryProtocol {
+class UserRepositoryImpl: UserRepository {
     private let fb = FirebaseManager.shared
     private let userRef: CollectionReference
     

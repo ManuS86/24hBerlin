@@ -15,7 +15,7 @@ struct Event: Codable, Identifiable, Hashable {
     var start: Date
     var end: Date?
     let details: String
-    let repeats: [[Int]]?
+    var repeats: [[Int]]?
     let subtitle: String?
     let learnmoreLink: String?
     let featured: String?

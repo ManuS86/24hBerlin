@@ -27,7 +27,7 @@ class SettingsViewModel: ObservableObject {
     private let fb = FirebaseManager.shared
     private var listener: ListenerRegistration?
     private let notificationService = NotificationService.shared
-    private let userRepo = UserRepository()
+    private let userRepo = UserRepositoryImpl()
     
     init() {
         if listener == nil {

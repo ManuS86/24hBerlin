@@ -7,7 +7,7 @@
 
 import FirebaseFirestore
 
-protocol UserRepositoryProtocol {
+protocol UserRepository {
     func register(email: String, password: String) async throws
     func addUserListener(onChange: @escaping (AppUser) -> Void) -> ListenerRegistration?
     func updateUserInformation(favoriteID: String?, settings: Settings?) async throws
